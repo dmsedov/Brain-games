@@ -1,6 +1,6 @@
 {
   "name": "brain-games-by-dmsedov",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "This is brain games based on js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
@@ -22,5 +22,8 @@
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.7.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.7"
   }
 }
