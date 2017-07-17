@@ -1,0 +1,26 @@
+{
+  "name": "brain-games-by-dmsedov",
+  "version": "1.1.1",
+  "description": "This is brain games based on js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "scripts": {
+    "babel-node": "babel-node",
+    "eslint": "eslint",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*",
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}
