@@ -18,7 +18,7 @@ export default (task, game) => {
       console.log('Correct!');
       iter(acc - 1);
     } else {
-      console.log('"yes" is wrong answer ;(. Correct answer was "no".');
+      console.log(`'${actual}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}`);
     }
   };
