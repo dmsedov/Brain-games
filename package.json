@@ -1,10 +1,11 @@
 {
   "name": "brain-games-by-dmsedov",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "This is brain games based on js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "scripts": {
     "babel-node": "babel-node",
