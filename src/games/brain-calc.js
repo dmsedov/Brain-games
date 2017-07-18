@@ -1,27 +1,34 @@
-import brainGames from '..';
+import runBrainGame from '..';
+import getRandNum from '../functions';
 
 const task = 'What is the result of the expression?';
 
 const brainCalc = () => {
-  const operations = ['+', '-', '*'];
-  const getRandOperation = (arr) => {
-    const indexOfItem = Math.floor(Math.random() * arr.length);
-    return arr[indexOfItem];
-  };
-  const randOperator = getRandOperation(operations);
-  const randNum1 = Math.floor(Math.random() * 100);
-  const randNum2 = Math.floor(Math.random() * 100);
-  const evaluation = () => {
-    switch (randOperator) {
-      case '+':
-        return randNum1 + randNum2;
-      case '-':
-        return randNum1 - randNum2;
+  const getRandOperation = (num) => {
+    switch (num) {
+      case 1:
+        return '+';
+      case 2:
+        return '-';
       default:
-        return randNum1 * randNum2;
+        return '*';
     }
   };
-  return [`${randNum1}${randOperator}${randNum2}`, `${evaluation()}`];
+  const randOperator = getRandOperation(getRandNum(1, 3));
+  const randNum1 = getRandNum(1, 20);
+  const randNum2 = getRandNum(1, 20);
+  const evaluateForm = (num1, num2, sign) => {
+    switch (sign) {
+      case '+':
+        return num1 + num2;
+      case '-':
+        return num1 - num2;
+      default:
+        return num1 * num2;
+    }
+  };
+  const value = evaluateForm(randNum1, randNum2, randOperator);
+  return [`${randNum1}${randOperator}${randNum2}`, `${value}`];
 };
 
-export default () => brainGames(task, brainCalc);
+export default () => runBrainGame(task, brainCalc);
