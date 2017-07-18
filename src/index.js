@@ -9,8 +9,9 @@ export default (task, game) => {
   const iter = (acc) => {
     if (acc === 0) {
       console.log(`Congratulations, ${userName}!`);
+      return;
     }
-    const { parameter, correctAnswer } = game();
+    const [parameter, correctAnswer] = game();
     console.log(`Question: ${parameter}`);
     const actual = readlineSync.question('Your answer: ');
     if (actual === correctAnswer) {
@@ -18,7 +19,7 @@ export default (task, game) => {
       iter(acc - 1);
     } else {
       console.log('"yes" is wrong answer ;(. Correct answer was "no".');
-      console.log('Let\'s try again, Bill!');
+      console.log(`Let's try again, ${userName}`);
     }
   };
   iter(countOfRounds);
