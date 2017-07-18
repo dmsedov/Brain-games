@@ -24,4 +24,4 @@ const brainCalc = () => {
   return [`${randNum1}${randOperator}${randNum2}`, `${evaluation()}`];
 };
 
-console.log(brainGames(task, brainCalc));
+export default () => brainGames(task, brainCalc);
