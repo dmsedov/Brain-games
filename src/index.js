@@ -15,7 +15,6 @@ export default (task, game) => {
     const expectedResult = game();
     const parameter = car(expectedResult);
     const correctAnswer = cdr(expectedResult);
-    console.log(parameter, correctAnswer, '!!!!');
     console.log(`Question: ${parameter}`);
     const actual = readlineSync.question('Your answer: ');
     if (actual === correctAnswer) {
