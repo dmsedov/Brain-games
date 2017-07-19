@@ -1,3 +1,4 @@
+import { cons } from 'hexlet-pairs';
 import runBrainGame from '..';
 import getRandNum from '../functions';
 
@@ -28,7 +29,7 @@ const brainCalc = () => {
     }
   };
   const value = evaluateForm(randNum1, randNum2, randOperator);
-  return [`${randNum1}${randOperator}${randNum2}`, `${value}`];
+  return cons(`${randNum1}${randOperator}${randNum2}`, `${value}`);
 };
 
 export default () => runBrainGame(task, brainCalc);
