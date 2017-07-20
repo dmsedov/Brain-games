@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import runBrainGame from '..';
-import getRandNum from '../functions';
+import getRandNum from '../getRandNum';
 
 const task = 'Answer "yes" if number even otherwise answer "no"';
 const brainEven = () => {

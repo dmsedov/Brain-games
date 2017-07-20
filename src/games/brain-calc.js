@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import runBrainGame from '..';
-import getRandNum from '../functions';
+import getRandNum from '../getRandNum';
 
 const task = 'What is the result of the expression?';
 
