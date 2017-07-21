@@ -1,6 +1,6 @@
 {
   "name": "brain-games-by-dmsedov",
-  "version": "1.7.13",
+  "version": "1.7.14",
   "description": "This is brain games based on js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
