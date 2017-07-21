@@ -5,7 +5,7 @@ import getRandNum from '../getRandNum';
 const task = 'What number is missing in this progression?';
 const brainProgression = () => {
   const randNum = getRandNum(0, 10);
-  const randStep = getRandNum(0, 9);
+  const randStep = getRandNum(1, 9);
   const randIndex = getRandNum(0, 9);
   const makeSeq = (num1, num2, acc) => {
     if (acc.length === 10) {
