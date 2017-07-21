@@ -2,7 +2,7 @@ import { cons } from 'hexlet-pairs';
 import runBrainGame from '..';
 import getRandNum from '../getRandNum';
 
-const task = 'What is the result of the expression?';
+const task = 'Balance the given number.';
 const brainBalance = () => {
   const randNum = getRandNum(10, 9999);
   const arrOfNum = Array.from(randNum.toString()).map(item => Number(item)).sort();
