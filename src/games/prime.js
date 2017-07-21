@@ -7,13 +7,12 @@ const brainPrime = () => {
   const randNum = getRandNum(2, 50);
   const isPrime = (number) => {
     const iter = (acc, num) => {
-      if (acc <= Math.sqrt(num)) {
-        if (num % acc === 0) {
-          return false;
-        }
-        return iter(acc + 1, num);
+      if (acc > Math.sqrt(num)) {
+        return true;
+      } else if (num % acc === 0) {
+        return false;
       }
-      return true;
+      return iter(acc + 1, num);
     };
     return iter(2, number);
   };
